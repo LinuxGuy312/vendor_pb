@@ -51,15 +51,13 @@ show_progress 0.1000000, 0;
 ui_print "|---------------------------------------------|";
 ui_print "|---------------------------------------------|";
 ui_print "|---------PitchBlack Recovery Project---------|";
-ui_print "|-------------------v2.9.1--------------------|";
-ui_print "|---------------------------------------------|";
 ui_print "|---------------------------------------------|";
 ui_print "|--------------Brought To You By--------------|";
 ui_print "|---------------------------------------------|";
 ui_print "|---------------PitchBlack Team---------------|";
 ui_print "|---------------------------------------------|";
 ui_print "|---------------------------------------------|";
-ui_print "|            Based on TWRP v3.3.1-x           |";
+ui_print "|            Based on TWRP v3.7.0-9           |";
 ui_print "|---------------------------------------------|";
 /sbin/mount /system;
 /sbin/mount /system_root;
@@ -71,7 +69,6 @@ ETC_=/system_root/$ETC;
 ETC__=/system/$ETC;
 PB1_PATH=/sdcard/PBTWRP
 PB2_PATH=/sdcard/PBRP/tools
-PB3_PATH=/sdcard/PBRP/themes
 UI=/sdcard/PBRP/theme/ui.zip
 RES=/sdcard/PBRP/.twrps
 OLD=/sdcard/TWRP/PBRP
@@ -109,7 +106,6 @@ fi
 	rm $ETC__
 	rm -rf $PB1_PATH
 	rm -rf $PB2_PATH
-	rm -rf $PB3_PATH
 	rm $UI
 	rm -rf $RES
 	rm -rf $OLD
@@ -163,11 +159,9 @@ fi
 #Copy Specific Files
 if [ -f "/sdcard/PBRP" ]; then
 cp -r $PB/tools /sdcard/PBRP/
-cp -r $PB/themes /sdcard/PBRP/
 else
 mkdir -p /sdcard/PBRP
 cp -r $PB/tools /sdcard/PBRP/
-cp -r $PB/themes /sdcard/PBRP/
 fi
 
 #Copy Backup from TWRP
